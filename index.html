@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/background.css" />
+  <link rel="stylesheet" href="css/generetedPassword.css" />
+  <link rel="stylesheet" href="css/settingPassword.css" />
+  <link rel="stylesheet" href="css/strenghtPassword.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap" rel="stylesheet" />
+  <title>Password generator app</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="appName">
+      <p>Password generator</p>
+    </div>
+
+    <div id="generetPassword">
+      <div id="passwordPlece">
+        <p class="generetedPassword">Your password</p>
+      </div>
+      <button onclick="copyPassword()">Copy</button>
+    </div>
+
+    <div id="settingPassword">
+      <div>
+        <p>
+          Character length <span id="valveSlider" class="sliderValue">3</span>
+        </p>
+        <input type="range" id="passwordLengthInput" class="passwordLength" name="slider" min="3" max="30" value="3"
+          oninput="updateSliderValue(this.value)" />
+      </div>
+
+      <div>
+        <p>Include Uppercase Letters</p>
+        <input type="checkbox" class="upperCaseBox" />
+      </div>
+      <div>
+        <p>Include Lowercase Letters</p>
+        <input type="checkbox" class="lowerCaseBox" />
+      </div>
+      <div>
+        <p>Include Numbers</p>
+        <input type="checkbox" class="numbersBox" />
+      </div>
+      <div>
+        <p>Include Symbols</p>
+        <input type="checkbox" class="symbolsBox" />
+      </div>
+      <button id="generateInput" onclick="generatePassword()" class="btn">
+        GENERATE
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
