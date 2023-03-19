@@ -45,8 +45,8 @@ function updateSliderValue(value) {
 }
 
 function copyPassword() {
-  var password = document.querySelector('.generetedPassword');
-  var range = document.createRange();
+  const password = document.querySelector('.generetedPassword');
+  const range = document.createRange();
   range.selectNode(password);
   window.getSelection().removeAllRanges();
   window.getSelection().addRange(range);
